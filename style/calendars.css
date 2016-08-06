@@ -1,0 +1,77 @@
+/* Load Fonts */
+@font-face {
+    font-family: PTSans;
+    src: url(./Fonts/PTS55F.ttf);
+}
+@font-face {
+    font-family: PTSans-light;
+    src: url(./Fonts/PTC55F.ttf);
+}
+
+/* General */
+html {padding:0px;margin:0px;font-family:PTSans, Helvetica;}
+body {min-height:100%;width:90%;padding:30px 5%;margin:0px;border-top:8px solid #555;line-height:1.5em;}
+a {text-decoration:none; color:inherit;}
+
+h1, h2, h3, h4, h5, h6 {color:#333;}
+
+main {display:inline-block;vertical-align:top;width: calc(100% - 500px); border:1px solid #555;}
+section {width:100%;}
+section h2 {padding:10px; background:#555; color:#fff;margin:0px;}
+
+aside {display:inline-block;vertical-align:top;width:400px;margin:0px 0px 0px 50px;}
+
+@media screen and (max-width:50em) {
+	main {width: calc(100% - 32px);}
+	aside {width: calc(100% - 32px);margin:20px 0px 0px 0px;}
+}
+
+/* Calendar */
+section#calendar {}
+
+section#calendar table {width:100%;padding:0px;}
+section#calendar table td {height:70px;border-bottom:1px solid #ddd;position:relative;padding:5px 5px 5px 28px; margin:0px; width: calc(100% / 7 - 33px);display:inline-block;}
+section#calendar table td span:first-child {position:absolute;top:0px;left:0px;color:rgba(0,0,0,0.4);height:100%;background:#eee;width:24px;text-align:center;z-index:1;}
+section#calendar table tbody tr:last-child td {border-bottom-width:0px;}
+
+section#calendar table tbody tr:first-child {background:#888;color:#fff;}
+section#calendar table th {padding:5px 10px 5px 10px; margin:0px; width: calc(100% / 7 - 20px);display:inline-block;}
+
+section#calendar > h2 a {position:relative;font-weight:normal;float:right;}
+
+section#calendar > h2 a span {display:none;position:absolute;top:100%;right:0px;background-color:#888;padding:10px;color:#fff;font-size:0.8em;}
+section#calendar > h2 a:hover {color:#aaa;}
+section#calendar > h2 a:hover span {display:block;z-index:1000;}
+
+section#calendar table td a {margin-bottom:3px;height:15px;display:block;}
+section#calendar table td a div {position:absolute;top:100%;background:rgba(0,0,0,0.8);color:#fff;display:none;width:auto;min-width:300px;}
+section#calendar table td a:hover div {display:block;z-index:1000;}
+section#calendar table td a div h2 {font-size:1.1em;}
+section#calendar table td a div dl {padding:10px;}
+
+/* Sections in aside */
+aside section {border:1px solid #555;}
+aside section ul {margin:0px;padding:0px;}
+aside section ul li {padding:0.4em 1em;border-bottom:1px dotted #aaa;list-style-type:none;}
+aside section ul li:last-child {border-bottom-width:0px;}
+aside section ul li:hover {background:#aaa;color:#fff;}
+aside section ul li span {display:inline-block; vertical-align:middle;}
+aside section ul li span:first-child {width:1em;height:1em;margin-right:1em;}
+
+/*  */
+section#upcomingevents {margin-bottom:20px;}
+
+
+/* -- Login page -- */
+
+body.loginscreen {padding:10% 20% 5em 20%;background-color:#333;width:60%;height:60%;min-height:auto;border-top-width:0px;}
+@media screen and (max-width:50em) { body.loginscreen {width:90%;padding:10% 5% 0px 5%;} }
+div.logindiv {border: 1px solid #ddd;background-color:#fff;height:100%;min-height:auto;text-align:center;border-radius:3px;position:relative;padding-bottom:1em;}
+p.errormsg {font-weight:bold;color:#f00;}
+div.logindiv form input, div.logindiv form textarea {width:60%;padding:0.5em;background-color:#eee;border:1px solid #ddd;}
+div.logindiv form input:hover, div.logindiv form textarea:hover {background-color:#fff;}
+div.logindiv form input[type="submit"] {width:60%;background-color:#fff;border:1px solid #ddd;margin:5px 0px 15px 0px;}
+div.logindiv form input[type="submit"]:hover, div.logindiv form input[type="submit"]:hover {border-color:#aaa;background-color:#eee;}
+div.logindiv a.loginrequest:hover, div.logindiv a.loginrequest:active, div.logindiv a.proginfo:hover, div.logindiv a.proginfo:active {background-color:#555;color:#fff;}
+div.logindiv a.loginrequest, div.logindiv a.proginfo {position:absolute;bottom:-0.5em;left:20px;border:1px solid #ddd;border-radius:2px;background-color:#555;color:#fff;padding:4px 10px;}
+div.logindiv a.proginfo {left:initial;right:20px;}
