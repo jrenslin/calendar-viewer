@@ -10,4 +10,4 @@ This is a small viewer for ical streams written in PHP. All .ics files in the *.
 
 ## License
 
-> This code is licensed under (https://creativecommons.org/licenses/by-sa/3.0/)CC-BY-SA. Attribution: Joshua R. Enslin.
+> This code is licensed under CC-BY-SA (https://creativecommons.org/licenses/by-sa/3.0/). Attribution: Joshua R. Enslin.
