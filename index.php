@@ -5,6 +5,7 @@ if (file_exists('password_protect.php') == True) include ('password_protect.php'
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
+include ('auto_update.php');
 include ('ics_parser.php');
 include ('additionalfunctions.php');
 
@@ -32,6 +33,7 @@ else if (intval($calmonth) == 12){
 	$nextyear = strval(intval($calyear) + 1);
 }
 
+get_calendars();
 checkdir('./calendars');
 $calendar = array();
 
