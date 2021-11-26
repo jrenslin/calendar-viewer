@@ -19,6 +19,7 @@ function split_ics_lines ($input) {
 
 // Parser for ics
 function parse_ics ($str) {
+	$str = rtrim($str);
 
 	if (substr($str, 0, 15) != "BEGIN:VCALENDAR") die ("This is not a calendar. Supplied string:".$str);
 	else if (substr($str, strlen($str) - 13, 13) != "END:VCALENDAR") die ("This is not a calendar. Supplied string:".$str."<br /><br />No end tag found.");
